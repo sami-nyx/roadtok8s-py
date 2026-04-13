@@ -1,6 +1,6 @@
 name: Hello World
 on:
-  workflow_dispach:
+  workflow_dispatch:
   push:
 
 jobs:
