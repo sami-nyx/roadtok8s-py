@@ -6,7 +6,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    environment: Deploy
+    environment: Depoly
     steps:
       - uses: actions/checkout@v3
       - name: Hello World
