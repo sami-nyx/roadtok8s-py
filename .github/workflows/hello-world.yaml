@@ -15,8 +15,8 @@ jobs:
       - name: Ensure Docker is installed
         uses: appleboy/ssh-action@v1.0.3
         with:
-          host: ${{ secrets.EC2_HOST }}
-          username: ${{ secrets.EC2_USERNAME }}
+          host: ${{ EC2_HOST }}
+          username: ${{ EC2_USERNAME }}
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
             echo "Checking for Docker installation..."
@@ -27,7 +27,7 @@ jobs:
               sudo yum install -y docker
               sudo systemctl start docker
               sudo systemctl enable docker
-              sudo usermod -aG docker ${{ secrets.EC2_USERNAME }}
+              sudo usermod -aG docker ${{ EC2_USERNAME }}
             else
               echo "Docker is already installed."
             fi
