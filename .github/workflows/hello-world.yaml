@@ -8,5 +8,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Hello World
-        run: echo "Hello World secret: ${{ secrets.SECRET_VAR }}:"
+      - name: Hello Worldenv:
+          MY_SECRET: ${{ secrets.SECRET_VAR }}
+        run: echo "Hello World secret: $MY_SECRET:"
