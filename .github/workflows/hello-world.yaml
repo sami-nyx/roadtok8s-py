@@ -20,7 +20,7 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
             echo "Checking for Docker installation..."
-            echo "server: ${{ vars.EC2_HOST }}"
+            echo "server: $EC2_HOST"
             if ! command -v docker &> /dev/null; then
               echo "Docker not found. Installing..."
               sudo yum update
